@@ -1,0 +1,58 @@
+#Ingreso de datos en variables
+horast = int(input("Numero de horas trabajadas: "))
+turno = input("Turno de trabajo (mañana, tarde, noche): ")
+
+#Tarifa ordinaria inicial
+tarifa=37
+
+#Si esta en turno "Tarde":
+if turno == "tarde":
+
+    #A la tarifa se le sumara el siguiente valor
+    tarifa+=1.20
+
+    #Hago la formula del Sueldo Bruto y lo Imprimo en pantalla
+    sueldo = horast*tarifa
+    print(f"El sueldo bruto de la tarde es {sueldo}")
+
+
+
+
+#Si esta en turno "Noche":
+elif turno == "noche":
+
+    #A la tarifa se le sumara el siguiente valor
+    tarifa+=1.50
+
+    #Formula del Sueldo Bruto
+    sueldo = horast*tarifa
+
+    #CONDICIONALES:
+    #Si el sueldo esta entre 2000 a 5000, se aplicara un descuento de 15%.
+    if (sueldo >= 2000 and sueldo<=5000):
+        descuento1 = (15/100)*sueldo
+        sueldo=sueldo-descuento1
+        print(f"El sueldo bruto de la noche menos el 15% es {sueldo}")
+
+    #Si el sueldo esta entre 800 a 10000, se aplicara un descuento de 17%.
+    elif (sueldo >= 8000 and sueldo<=10000):
+        descuento2 = (17/100)*sueldo
+        sueldo=sueldo-descuento2
+        print(f"El sueldo bruto de la noche menos el 17% es {sueldo}")
+
+    #Si no esta entre ninguna de las anteriores, Imprime solo el Sueldo Bruto
+    else:
+        print("El sueldo bruto de la noche es " ,sueldo)
+
+
+
+
+#Si esta en turno "Mañana" u otro:
+else:
+    
+    #añadira la tarifa con el valor de 0
+    tarifa+=0
+
+    #Hago la formula del Sueldo Bruto y lo Imprimo en pantalla
+    sueldo = horast*tarifa
+    print(f"El sueldo bruto de la mañana es {sueldo}")
