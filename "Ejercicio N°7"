@@ -1,0 +1,22 @@
+print("Calculo de area de un triangulo")
+#Ingreso de datos en variables
+base=int(input("Ingrese la base: "))
+altura=int(input("Ingrese la altura: "))
+
+#Aplico la formula a los datos de las variables
+formula=(base*altura)/2
+
+
+
+print("        ()")
+print("       (  )")
+print("      (    )")
+print("     (      )")
+print("    (        )")
+print("   (          )")
+print("  (            )")
+print(" (              )")
+print("(______)")
+
+#Imprimo el resultado
+print("El area del triangulo es: "+str(formula))
